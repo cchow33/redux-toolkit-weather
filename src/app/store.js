@@ -5,10 +5,10 @@
 //   },
 // });
 
-// Connect api slice to redux store
+// Connect api slice to redux store and register apiSlice using setupListeners and configureStore modules
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { apiSlice } from '../features/api/apiSlice'
+import { apiSlice } from '../apiCalls/apiSlice'
 export const store = configureStore({
   reducer: {
     [apiSlice.reducerPath]: apiSlice.reducer,
